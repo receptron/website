@@ -1,0 +1,36 @@
+{
+  "name": "@graphai/website",
+  "description": "GraphAI Official Website",
+  "version": "0.0.1",
+  "license": "MIT",
+  "author": "Satoshi Nakajima, Isamu Arimoto",
+  "bugs": {
+    "url": "https://github.com/receptron/website/issues"
+  },
+  "homepage": "https://github.com/receptron/website#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/receptron/website"
+  },
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "preview": "vitepress preview docs",
+    "eslint": "eslint --fix docs",
+    "eslint:check": "eslint docs",
+    "format": "prettier --write 'docs/**/*.{ts,css,js,vue,mts,json,md}'",
+    "format:check": "prettier --check 'docs/**/*.{ts,css,js,vue,mts,json,md}'",
+    "deploy": "yarn build && firebase deploy --only hosting"
+  },
+  "devDependencies": {
+    "eslint": "^9.21.0",
+    "eslint-config-prettier": "^10.0.2",
+    "prettier": "^3.5.2",
+    "typescript": "^5.8.2",
+    "typescript-eslint": "^8.25.0",
+    "vitepress": "^1.6.3"
+  },
+  "dependencies": {
+    "three": "^0.174.0"
+  }
+}
