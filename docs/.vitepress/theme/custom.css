@@ -21,7 +21,16 @@
   height: 250px;
 }
 
+.VPHero.has-image .name {
+  font-size: 3rem;
+  padding-bottom: 1rem;
+}
+
 @media (min-width: 640px) {
+  .VPHero.has-image .name {
+    font-size: 4rem;
+    padding-bottom: inherit;
+  }
   .VPImage.image-src {
     max-width: 120px;
     max-height: 120px;

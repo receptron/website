@@ -24,6 +24,18 @@
 </template>
 
 <style scoped>
+
+
+.cube-container {
+  --face-size: 100px;
+  --translate-z: 50px;
+
+  @media (min-width: 640px) {
+    --face-size: 120px;
+    --translate-z: 60px;
+  }
+}
+
 .cube-container {
   perspective: 600px;
 
@@ -36,8 +48,8 @@
 }
 
 .cube {
-  width: 100px;
-  height: 100px;
+  width: var(--face-size);
+  height: var(--face-size);
 
   position: relative;
   transform-style: preserve-3d;
@@ -62,33 +74,34 @@
   opacity: 0.75;
 }
 
+
 .front {
-  transform: translateZ(50px);
+  transform: translateZ(var(--translate-z));
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
 }
 
 .back {
-  transform: rotateY(180deg) translateZ(50px);
+  transform: rotateY(180deg) translateZ(var(--translate-z));
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
 }
 
 .right {
-  transform: rotateY(90deg) translateZ(50px);
+  transform: rotateY(90deg) translateZ(var(--translate-z));
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
 }
 
 .left {
-  transform: rotateY(-90deg) translateZ(50px);
+  transform: rotateY(-90deg) translateZ(var(--translate-z));
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
 }
 
 .top {
-  transform: rotateX(90deg) translateZ(50px);
+  transform: rotateX(90deg) translateZ(var(--translate-z));
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
 }
 
 .bottom {
-  transform: rotateX(-90deg) translateZ(50px);
+  transform: rotateX(-90deg) translateZ(var(--translate-z));
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
 }
 
