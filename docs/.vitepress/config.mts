@@ -1,7 +1,11 @@
 import { defineConfig } from "vitepress";
+import { generateAgentsSidebar } from "./helpers/generateSidebar";
 
 // TODO: change to the actual domain
 const HOST_NAME = "";
+
+
+const agentsSidebar = generateAgentsSidebar();
 
 export default defineConfig({
   title: "GraphAI - Declarative AI Workflow Engine",
@@ -32,15 +36,18 @@ export default defineConfig({
     siteTitle: "GraphAI",
     logo: "/images/logo.png",
     nav: [
-      { text: "Home", link: "/" },
-      { text: "Guide", link: "/tutorial" },
+      { text: "Guide", link: "/guide/tutorial" },
+      { text: "Agents", link: agentsSidebar[0].items[0].items[0].link },
     ],
-    sidebar: [
-      {
-        text: "Tutorial",
-        link: "/tutorial",
-      },
-    ],
+    sidebar: {
+      '/guide/': [
+        {
+          text: "Tutorial",
+          link: "/guide/tutorial",
+        },
+      ],
+      '/agents/': agentsSidebar,
+    },
     socialLinks: [{ icon: "github", link: "https://github.com/receptron/graphai" }],
     outline: {
       level: "deep",
@@ -71,15 +78,16 @@ export default defineConfig({
       link: "/ja/",
       themeConfig: {
         nav: [
-          { text: "ホーム", link: "/" },
-          { text: "ガイド", link: "/ja/tutorial" },
+          { text: "ガイド", link: "/ja/guide/tutorial" },
         ],
-        sidebar: [
-          {
-            text: "チュートリアル",
-            link: "/ja/tutorial",
-          },
-        ],
+        sidebar: {
+          '/ja/guide/': [
+            {
+              text: "チュートリアル",
+              link: "/ja/guide/tutorial",
+            },
+          ],
+        },
       },
     },
   },
