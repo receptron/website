@@ -59,30 +59,37 @@
   width: 100%;
   height: 100%;
   display: block;
+  opacity: 0.75;
 }
 
 .front {
   transform: translateZ(50px);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
 }
 
 .back {
   transform: rotateY(180deg) translateZ(50px);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
 }
 
 .right {
   transform: rotateY(90deg) translateZ(50px);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
 }
 
 .left {
   transform: rotateY(-90deg) translateZ(50px);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
 }
 
 .top {
   transform: rotateX(90deg) translateZ(50px);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
 }
 
 .bottom {
   transform: rotateX(-90deg) translateZ(50px);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
 }
 
 @keyframes rotate {
