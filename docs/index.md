@@ -9,7 +9,10 @@ hero:
   actions:
     - theme: brand
       text: Tutorial
-      link: /tutorial
+      link: /guide/tutorial
+    - theme: alt
+      text: Agents
+      link: /agents/array/arrayFlatAgent
   image:
     src: images/logo.png
     alt: GraphAI Logo

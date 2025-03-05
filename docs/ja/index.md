@@ -9,7 +9,7 @@ hero:
   actions:
     - theme: brand
       text: チュートリアル
-      link: /tutorial
+      link: /ja/guide/tutorial
   image:
     src: /images/logo.png
     alt: GraphAI

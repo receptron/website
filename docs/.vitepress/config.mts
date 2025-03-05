@@ -1,10 +1,10 @@
 import { defineConfig } from "vitepress";
-import { generateAgentsSidebar } from "./helpers/generateSidebar";
+import { generateAgentsSidebar, generateGuidesSidebar } from "./helpers/generateSidebar";
 
 // TODO: change to the actual domain
 const HOST_NAME = "";
 
-
+const guidesSidebar = generateGuidesSidebar();
 const agentsSidebar = generateAgentsSidebar();
 
 export default defineConfig({
@@ -40,12 +40,7 @@ export default defineConfig({
       { text: "Agents", link: agentsSidebar[0].items[0].items[0].link },
     ],
     sidebar: {
-      '/guide/': [
-        {
-          text: "Tutorial",
-          link: "/guide/tutorial",
-        },
-      ],
+      '/guide/': guidesSidebar,
       '/agents/': agentsSidebar,
     },
     socialLinks: [{ icon: "github", link: "https://github.com/receptron/graphai" }],
