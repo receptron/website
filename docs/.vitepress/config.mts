@@ -1,13 +1,32 @@
 import { defineConfig } from "vitepress";
 
-// https://vitepress.dev/reference/site-config
+// TODO: change to the actual domain
+const HOST_NAME = "";
+
 export default defineConfig({
   title: "GraphAI - Declarative AI Workflow Engine",
   description:
-    "GraphAI is an asynchronous data flow execution engine, which allows developers to build agentic applications by describing agent workflows as declarative data flow graphs in YAML or JSON.",
+    "GraphAI is an asynchronous data flow execution engine for building agentic applications using declarative data flow graphs.",
   lastUpdated: true,
   ignoreDeadLinks: true,
   titleTemplate: ":title - GraphAI",
+  sitemap: {
+    hostname: HOST_NAME,
+  },
+  head: [
+    ['meta', { property: 'og:type', content: 'website' }],
+    ['meta', { property: 'og:locale', content: 'en' }],
+    ['meta', { property: 'og:title', content: 'GraphAI' }],
+    ['meta', { property: 'og:site_name', content: 'GraphAI' }],
+    ['meta', { property: 'og:image', content: `${HOST_NAME}/images/og-image.png` }],
+    ['meta', { property: 'og:url', content: `${HOST_NAME}/` }],
+    ['meta', { property: 'og:description', content: "GraphAI is an asynchronous data flow execution engine for building agentic applications using declarative data flow graphs." }],
+    ['link', { rel: 'icon', type: 'image/png', href: '/favicon/favicon-96x96.png', sizes: '96x96' }],
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon/favicon.svg' }],
+    ['link', { rel: 'shortcut icon', href: '/favicon/favicon.ico' }],
+    ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/favicon/apple-touch-icon.png' }],
+    ['link', { rel: 'manifest', href: '/favicon/site.webmanifest' }],
+  ],
 
   themeConfig: {
     siteTitle: "GraphAI",
