@@ -56,7 +56,7 @@
 
   transform-origin: center center;
 
-  animation: rotate 15s linear infinite;
+  animation: rotate 25s linear infinite;
 }
 
 .face {
