@@ -18,7 +18,7 @@ export default defineConfig({
     ],
     sidebar: [
       {
-        text: "Guide",
+        text: "Tutorial",
         link: "/tutorial",
       },
     ],
@@ -57,7 +57,7 @@ export default defineConfig({
         ],
         sidebar: [
           {
-            text: "ガイド",
+            text: "チュートリアル",
             link: "/ja/tutorial",
           },
         ],
