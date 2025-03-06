@@ -69,9 +69,6 @@ export default defineConfig({
       "/agents/": agentsSidebar,
     },
     socialLinks: [{ icon: "github", link: "https://github.com/receptron/graphai" }],
-    outline: {
-      level: "deep",
-    },
     editLink: {
       pattern: "https://github.com/receptron/website/edit/main/docs/:path",
       text: "Edit this page on GitHub",
