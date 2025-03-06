@@ -1,5 +1,5 @@
 import { defineConfig } from "vitepress";
-import { generateAgentsSidebar, generateShowcaseSidebar } from "./helpers/generateSidebar";
+import { generateAgentsSidebar } from "./helpers/generateSidebar";
 
 // TODO: change to the actual domain
 const HOST_NAME = "";
