@@ -2,7 +2,7 @@ import { h } from "vue";
 import DefaultTheme from "vitepress/theme";
 import "./custom.css";
 import HeroImage from "./components/HeroImage.vue";
-import UserArticles from "./components/UserArticles.vue";
+import CommunityArticles from "./components/CommunityArticles/CommunityArticles.vue";
 export default {
   extends: DefaultTheme,
   Layout() {
@@ -11,6 +11,6 @@ export default {
     });
   },
   enhanceApp({ app }) {
-    app.component("UserArticles", UserArticles);
+    app.component("CommunityArticles", CommunityArticles);
   },
 };

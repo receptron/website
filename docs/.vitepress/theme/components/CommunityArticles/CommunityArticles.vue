@@ -9,5 +9,5 @@
 </template>
 
 <script setup lang="ts">
-import { data } from "./userArticles.data.mts";
+import { data } from "./article.data.mts";
 </script>

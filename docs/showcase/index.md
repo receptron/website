@@ -23,4 +23,4 @@ Here is a list of related projects and articles about GraphAI.
 
 ## Community articles
 
-<UserArticles />
+<CommunityArticles />
