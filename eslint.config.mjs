@@ -5,7 +5,7 @@ import eslintConfigPrettier from "eslint-config-prettier";
 
 export default [
   {
-    files: ["docs/**/*.{js,mjs,cjs,vue,ts,tsx,mts,cts}"],
+    files: ["docs/**/*.{js,mjs,cjs,ts,tsx,mts,cts}"],
   },
   {
     ignores: ["docs/.vitepress/cache/**/*", "docs/.vitepress/dist/**/*"],

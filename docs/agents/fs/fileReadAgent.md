@@ -9,7 +9,6 @@ Read data from file system and returns data
 #### inputs
 
 ```json
-
 {
   "type": "object",
   "properties": {
@@ -18,27 +17,21 @@ Read data from file system and returns data
       "description": "file names"
     }
   },
-  "required": [
-    "array"
-  ]
+  "required": ["array"]
 }
-
-````
+```
 
 #### output
 
 ```json
-
 {
   "type": "object"
 }
-
-````
+```
 
 ## Input example of the next node
 
 ```json
-
 [
   ":agentId",
   ":agentId.array",
@@ -50,34 +43,19 @@ Read data from file system and returns data
   ":agentId.array.$0.4",
   ":agentId.array.$0.5"
 ]
+```
 
-````
 ```json
+[":agentId", ":agentId.array", ":agentId.array.$0"]
+```
 
-[
-  ":agentId",
-  ":agentId.array",
-  ":agentId.array.$0"
-]
-
-````
 ```json
+[":agentId", ":agentId.array", ":agentId.array.$0"]
+```
 
-[
-  ":agentId",
-  ":agentId.array",
-  ":agentId.array.$0"
-]
-
-````
 ```json
-
-[
-  ":agentId",
-  ":agentId.data"
-]
-
-````
+[":agentId", ":agentId.data"]
+```
 
 ## Samples
 
@@ -86,139 +64,101 @@ Read data from file system and returns data
 #### inputs
 
 ```json
-
 {
-  "array": [
-    "test.txt"
-  ]
+  "array": ["test.txt"]
 }
-
-````
+```
 
 #### params
 
 ```json
-
-{"baseDir":"/home/runner/work/graphai/graphai/agents/vanilla_node_agents/lib/node_file_agents/../../tests/files/"}
-
-````
+{ "baseDir": "/home/runner/work/graphai/graphai/agents/vanilla_node_agents/lib/node_file_agents/../../tests/files/" }
+```
 
 #### result
 
 ```json
-
 {
   "array": [
     {
       "type": "Buffer",
-      "data": [
-        104,
-        101,
-        108,
-        108,
-        111,
-        10
-      ]
+      "data": [104, 101, 108, 108, 111, 10]
     }
   ]
 }
+```
 
-````
 ### Sample1
 
 #### inputs
 
 ```json
-
 {
-  "array": [
-    "test.txt"
-  ]
+  "array": ["test.txt"]
 }
-
-````
+```
 
 #### params
 
 ```json
-
-{"baseDir":"/home/runner/work/graphai/graphai/agents/vanilla_node_agents/lib/node_file_agents/../../tests/files/","outputType":"base64"}
-
-````
+{ "baseDir": "/home/runner/work/graphai/graphai/agents/vanilla_node_agents/lib/node_file_agents/../../tests/files/", "outputType": "base64" }
+```
 
 #### result
 
 ```json
-
 {
-  "array": [
-    "aGVsbG8K"
-  ]
+  "array": ["aGVsbG8K"]
 }
+```
 
-````
 ### Sample2
 
 #### inputs
 
 ```json
-
 {
-  "array": [
-    "test.txt"
-  ]
+  "array": ["test.txt"]
 }
-
-````
+```
 
 #### params
 
 ```json
-
-{"baseDir":"/home/runner/work/graphai/graphai/agents/vanilla_node_agents/lib/node_file_agents/../../tests/files/","outputType":"text"}
-
-````
+{ "baseDir": "/home/runner/work/graphai/graphai/agents/vanilla_node_agents/lib/node_file_agents/../../tests/files/", "outputType": "text" }
+```
 
 #### result
 
 ```json
-
 {
-  "array": [
-    "hello\n"
-  ]
+  "array": ["hello\n"]
 }
+```
 
-````
 ### Sample3
 
 #### inputs
 
 ```json
-
 {
   "file": "test.txt"
 }
-
-````
+```
 
 #### params
 
 ```json
-
-{"baseDir":"/home/runner/work/graphai/graphai/agents/vanilla_node_agents/lib/node_file_agents/../../tests/files/","outputType":"text"}
-
-````
+{ "baseDir": "/home/runner/work/graphai/graphai/agents/vanilla_node_agents/lib/node_file_agents/../../tests/files/", "outputType": "text" }
+```
 
 #### result
 
 ```json
-
 {
   "data": "hello\n"
 }
-
-````
+```
 
 ## Author
 
@@ -231,4 +171,3 @@ https://github.com/receptron/graphai
 ## License
 
 MIT
-

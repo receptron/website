@@ -9,26 +9,18 @@ OpenAI Image Agent
 #### inputs
 
 ```json
-
 {}
-
-````
+```
 
 #### output
 
 ```json
-
 {}
-
-````
+```
 
 ## Input example of the next node
 
-
-
 ## Samples
-
-
 
 ## Author
 
@@ -41,4 +33,3 @@ https://github.com/receptron/graphai
 ## License
 
 MIT
-

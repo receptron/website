@@ -9,7 +9,6 @@ Returns the sum of input values
 #### inputs
 
 ```json
-
 {
   "type": "object",
   "properties": {
@@ -18,154 +17,75 @@ Returns the sum of input values
       "description": "the array"
     }
   },
-  "required": [
-    "array"
-  ]
+  "required": ["array"]
 }
-
-````
+```
 
 #### output
 
 ```json
-
 {
   "type": "object"
 }
-
-````
+```
 
 ## Input example of the next node
 
 ```json
+[":agentId", ":agentId.data", ":agentId.data.a"]
+```
 
-[
-  ":agentId",
-  ":agentId.data",
-  ":agentId.data.a"
-]
-
-````
 ```json
+[":agentId", ":agentId.data", ":agentId.data.a", ":agentId.data.b", ":agentId.data.c", ":agentId.data.d"]
+```
 
-[
-  ":agentId",
-  ":agentId.data",
-  ":agentId.data.a",
-  ":agentId.data.b",
-  ":agentId.data.c",
-  ":agentId.data.d"
-]
-
-````
 ```json
+[":agentId", ":agentId.data", ":agentId.data.a"]
+```
 
-[
-  ":agentId",
-  ":agentId.data",
-  ":agentId.data.a"
-]
-
-````
 ```json
+[":agentId", ":agentId.data", ":agentId.data.a"]
+```
 
-[
-  ":agentId",
-  ":agentId.data",
-  ":agentId.data.a"
-]
-
-````
 ```json
+[":agentId", ":agentId.data", ":agentId.data.a"]
+```
 
-[
-  ":agentId",
-  ":agentId.data",
-  ":agentId.data.a"
-]
-
-````
 ```json
+[":agentId", ":agentId.data", ":agentId.data.a", ":agentId.data.b"]
+```
 
-[
-  ":agentId",
-  ":agentId.data",
-  ":agentId.data.a",
-  ":agentId.data.b"
-]
-
-````
 ```json
+[":agentId", ":agentId.data", ":agentId.data.a", ":agentId.data.b"]
+```
 
-[
-  ":agentId",
-  ":agentId.data",
-  ":agentId.data.a",
-  ":agentId.data.b"
-]
-
-````
 ```json
+[":agentId", ":agentId.a"]
+```
 
-[
-  ":agentId",
-  ":agentId.a"
-]
-
-````
 ```json
+[":agentId", ":agentId.a", ":agentId.b", ":agentId.c", ":agentId.d"]
+```
 
-[
-  ":agentId",
-  ":agentId.a",
-  ":agentId.b",
-  ":agentId.c",
-  ":agentId.d"
-]
-
-````
 ```json
+[":agentId", ":agentId.a"]
+```
 
-[
-  ":agentId",
-  ":agentId.a"
-]
-
-````
 ```json
+[":agentId", ":agentId.a"]
+```
 
-[
-  ":agentId",
-  ":agentId.a"
-]
-
-````
 ```json
+[":agentId", ":agentId.a"]
+```
 
-[
-  ":agentId",
-  ":agentId.a"
-]
-
-````
 ```json
+[":agentId", ":agentId.a", ":agentId.b"]
+```
 
-[
-  ":agentId",
-  ":agentId.a",
-  ":agentId.b"
-]
-
-````
 ```json
-
-[
-  ":agentId",
-  ":agentId.a",
-  ":agentId.b"
-]
-
-````
+[":agentId", ":agentId.a", ":agentId.b"]
+```
 
 ## Samples
 
@@ -174,7 +94,6 @@ Returns the sum of input values
 #### inputs
 
 ```json
-
 {
   "array": [
     {
@@ -188,34 +107,29 @@ Returns the sum of input values
     }
   ]
 }
-
-````
+```
 
 #### params
 
 ```json
-
 {}
-
-````
+```
 
 #### result
 
 ```json
-
 {
   "data": {
     "a": 6
   }
 }
+```
 
-````
 ### Sample1
 
 #### inputs
 
 ```json
-
 {
   "array": [
     [
@@ -244,21 +158,17 @@ Returns the sum of input values
     ]
   ]
 }
-
-````
+```
 
 #### params
 
 ```json
-
 {}
-
-````
+```
 
 #### result
 
 ```json
-
 {
   "data": {
     "a": 6,
@@ -267,14 +177,13 @@ Returns the sum of input values
     "d": -10
   }
 }
+```
 
-````
 ### Sample2
 
 #### inputs
 
 ```json
-
 {
   "array": [
     {
@@ -282,34 +191,29 @@ Returns the sum of input values
     }
   ]
 }
-
-````
+```
 
 #### params
 
 ```json
-
 {}
-
-````
+```
 
 #### result
 
 ```json
-
 {
   "data": {
     "a": 1
   }
 }
+```
 
-````
 ### Sample3
 
 #### inputs
 
 ```json
-
 {
   "array": [
     {
@@ -320,34 +224,29 @@ Returns the sum of input values
     }
   ]
 }
-
-````
+```
 
 #### params
 
 ```json
-
 {}
-
-````
+```
 
 #### result
 
 ```json
-
 {
   "data": {
     "a": 3
   }
 }
+```
 
-````
 ### Sample4
 
 #### inputs
 
 ```json
-
 {
   "array": [
     {
@@ -361,34 +260,29 @@ Returns the sum of input values
     }
   ]
 }
-
-````
+```
 
 #### params
 
 ```json
-
 {}
-
-````
+```
 
 #### result
 
 ```json
-
 {
   "data": {
     "a": 6
   }
 }
+```
 
-````
 ### Sample5
 
 #### inputs
 
 ```json
-
 {
   "array": [
     {
@@ -405,35 +299,30 @@ Returns the sum of input values
     }
   ]
 }
-
-````
+```
 
 #### params
 
 ```json
-
 {}
-
-````
+```
 
 #### result
 
 ```json
-
 {
   "data": {
     "a": 6,
     "b": 3
   }
 }
+```
 
-````
 ### Sample6
 
 #### inputs
 
 ```json
-
 {
   "array": [
     {
@@ -449,35 +338,30 @@ Returns the sum of input values
     }
   ]
 }
-
-````
+```
 
 #### params
 
 ```json
-
 {}
-
-````
+```
 
 #### result
 
 ```json
-
 {
   "data": {
     "a": 6,
     "b": 2
   }
 }
+```
 
-````
 ### Sample7
 
 #### inputs
 
 ```json
-
 {
   "array": [
     {
@@ -491,32 +375,27 @@ Returns the sum of input values
     }
   ]
 }
-
-````
+```
 
 #### params
 
 ```json
-
-{"flatResponse":true}
-
-````
+{ "flatResponse": true }
+```
 
 #### result
 
 ```json
-
 {
   "a": 6
 }
+```
 
-````
 ### Sample8
 
 #### inputs
 
 ```json
-
 {
   "array": [
     [
@@ -545,35 +424,30 @@ Returns the sum of input values
     ]
   ]
 }
-
-````
+```
 
 #### params
 
 ```json
-
-{"flatResponse":true}
-
-````
+{ "flatResponse": true }
+```
 
 #### result
 
 ```json
-
 {
   "a": 6,
   "b": -4,
   "c": 10,
   "d": -10
 }
+```
 
-````
 ### Sample9
 
 #### inputs
 
 ```json
-
 {
   "array": [
     {
@@ -581,32 +455,27 @@ Returns the sum of input values
     }
   ]
 }
-
-````
+```
 
 #### params
 
 ```json
-
-{"flatResponse":true}
-
-````
+{ "flatResponse": true }
+```
 
 #### result
 
 ```json
-
 {
   "a": 1
 }
+```
 
-````
 ### Sample10
 
 #### inputs
 
 ```json
-
 {
   "array": [
     {
@@ -617,32 +486,27 @@ Returns the sum of input values
     }
   ]
 }
-
-````
+```
 
 #### params
 
 ```json
-
-{"flatResponse":true}
-
-````
+{ "flatResponse": true }
+```
 
 #### result
 
 ```json
-
 {
   "a": 3
 }
+```
 
-````
 ### Sample11
 
 #### inputs
 
 ```json
-
 {
   "array": [
     {
@@ -656,32 +520,27 @@ Returns the sum of input values
     }
   ]
 }
-
-````
+```
 
 #### params
 
 ```json
-
-{"flatResponse":true}
-
-````
+{ "flatResponse": true }
+```
 
 #### result
 
 ```json
-
 {
   "a": 6
 }
+```
 
-````
 ### Sample12
 
 #### inputs
 
 ```json
-
 {
   "array": [
     {
@@ -698,33 +557,28 @@ Returns the sum of input values
     }
   ]
 }
-
-````
+```
 
 #### params
 
 ```json
-
-{"flatResponse":true}
-
-````
+{ "flatResponse": true }
+```
 
 #### result
 
 ```json
-
 {
   "a": 6,
   "b": 3
 }
+```
 
-````
 ### Sample13
 
 #### inputs
 
 ```json
-
 {
   "array": [
     {
@@ -740,27 +594,22 @@ Returns the sum of input values
     }
   ]
 }
-
-````
+```
 
 #### params
 
 ```json
-
-{"flatResponse":true}
-
-````
+{ "flatResponse": true }
+```
 
 #### result
 
 ```json
-
 {
   "a": 6,
   "b": 2
 }
-
-````
+```
 
 ## Author
 
@@ -773,4 +622,3 @@ https://github.com/snakajima/graphai
 ## License
 
 MIT
-

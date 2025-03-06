@@ -9,7 +9,6 @@ Groq Agent
 #### inputs
 
 ```json
-
 {
   "type": "object",
   "properties": {
@@ -73,26 +72,19 @@ Groq Agent
     }
   }
 }
-
-````
+```
 
 #### output
 
 ```json
-
 {
   "type": "object"
 }
-
-````
+```
 
 ## Input example of the next node
 
-
-
 ## Samples
-
-
 
 ## Author
 
@@ -105,4 +97,3 @@ https://github.com/receptron/graphai
 ## License
 
 MIT
-

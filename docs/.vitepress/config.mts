@@ -8,8 +8,7 @@ const agentsSidebar = generateAgentsSidebar();
 
 export default defineConfig({
   title: "GraphAI - Declarative AI Workflow Engine",
-  description:
-    "GraphAI is an asynchronous data flow execution engine for building agentic applications using declarative data flow graphs.",
+  description: "GraphAI is an asynchronous data flow execution engine for building agentic applications using declarative data flow graphs.",
   lastUpdated: true,
   ignoreDeadLinks: true,
   titleTemplate: ":title - GraphAI",
@@ -17,18 +16,24 @@ export default defineConfig({
     hostname: HOST_NAME,
   },
   head: [
-    ['meta', { property: 'og:type', content: 'website' }],
-    ['meta', { property: 'og:locale', content: 'en' }],
-    ['meta', { property: 'og:title', content: 'GraphAI' }],
-    ['meta', { property: 'og:site_name', content: 'GraphAI' }],
-    ['meta', { property: 'og:image', content: `${HOST_NAME}/images/og-image.png` }],
-    ['meta', { property: 'og:url', content: `${HOST_NAME}/` }],
-    ['meta', { property: 'og:description', content: "GraphAI is an asynchronous data flow execution engine for building agentic applications using declarative data flow graphs." }],
-    ['link', { rel: 'icon', type: 'image/png', href: '/favicon/favicon-96x96.png', sizes: '96x96' }],
-    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon/favicon.svg' }],
-    ['link', { rel: 'shortcut icon', href: '/favicon/favicon.ico' }],
-    ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/favicon/apple-touch-icon.png' }],
-    ['link', { rel: 'manifest', href: '/favicon/site.webmanifest' }],
+    ["meta", { property: "og:type", content: "website" }],
+    ["meta", { property: "og:locale", content: "en" }],
+    ["meta", { property: "og:title", content: "GraphAI" }],
+    ["meta", { property: "og:site_name", content: "GraphAI" }],
+    ["meta", { property: "og:image", content: `${HOST_NAME}/images/og-image.png` }],
+    ["meta", { property: "og:url", content: `${HOST_NAME}/` }],
+    [
+      "meta",
+      {
+        property: "og:description",
+        content: "GraphAI is an asynchronous data flow execution engine for building agentic applications using declarative data flow graphs.",
+      },
+    ],
+    ["link", { rel: "icon", type: "image/png", href: "/favicon/favicon-96x96.png", sizes: "96x96" }],
+    ["link", { rel: "icon", type: "image/svg+xml", href: "/favicon/favicon.svg" }],
+    ["link", { rel: "shortcut icon", href: "/favicon/favicon.ico" }],
+    ["link", { rel: "apple-touch-icon", sizes: "180x180", href: "/favicon/apple-touch-icon.png" }],
+    ["link", { rel: "manifest", href: "/favicon/site.webmanifest" }],
   ],
 
   themeConfig: {
@@ -39,7 +44,7 @@ export default defineConfig({
       { text: "Agents", link: agentsSidebar[0].items[0].items[0].link },
     ],
     sidebar: {
-      '/guide/': [
+      "/guide/": [
         {
           text: "Tutorial",
           link: "/guide/tutorial",
@@ -61,7 +66,7 @@ export default defineConfig({
           link: "/guide/Paper",
         },
       ],
-      '/agents/': agentsSidebar,
+      "/agents/": agentsSidebar,
     },
     socialLinks: [{ icon: "github", link: "https://github.com/receptron/graphai" }],
     outline: {
@@ -92,11 +97,9 @@ export default defineConfig({
       lang: "ja-JP",
       link: "/ja/",
       themeConfig: {
-        nav: [
-          { text: "ガイド", link: "/ja/guide/tutorial" },
-        ],
+        nav: [{ text: "ガイド", link: "/ja/guide/tutorial" }],
         sidebar: {
-          '/ja/guide/': [
+          "/ja/guide/": [
             {
               text: "チュートリアル",
               link: "/ja/guide/tutorial",

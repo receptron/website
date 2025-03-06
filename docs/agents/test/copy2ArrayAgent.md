@@ -9,7 +9,6 @@ Copy2Array agent
 #### inputs
 
 ```json
-
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "description": "",
@@ -23,22 +22,16 @@ Copy2Array agent
           "minLength": 1
         }
       },
-      "required": [
-        "message"
-      ]
+      "required": ["message"]
     }
   },
-  "required": [
-    "item"
-  ]
+  "required": ["item"]
 }
-
-````
+```
 
 ## Input example of the next node
 
 ```json
-
 [
   ":agentId",
   ":agentId.$0",
@@ -62,10 +55,9 @@ Copy2Array agent
   ":agentId.$9",
   ":agentId.$9.message"
 ]
+```
 
-````
 ```json
-
 [
   ":agentId",
   ":agentId.$0",
@@ -89,10 +81,9 @@ Copy2Array agent
   ":agentId.$9",
   ":agentId.$9.message"
 ]
+```
 
-````
 ```json
-
 [
   ":agentId",
   ":agentId.$0",
@@ -106,8 +97,7 @@ Copy2Array agent
   ":agentId.$8",
   ":agentId.$9"
 ]
-
-````
+```
 
 ## Samples
 
@@ -116,27 +106,22 @@ Copy2Array agent
 #### inputs
 
 ```json
-
 {
   "item": {
     "message": "hello"
   }
 }
-
-````
+```
 
 #### params
 
 ```json
-
-{"count":10}
-
-````
+{ "count": 10 }
+```
 
 #### result
 
 ```json
-
 [
   {
     "message": "hello"
@@ -169,32 +154,27 @@ Copy2Array agent
     "message": "hello"
   }
 ]
+```
 
-````
 ### Sample1
 
 #### inputs
 
 ```json
-
 {
   "message": "hello"
 }
-
-````
+```
 
 #### params
 
 ```json
-
-{"count":10}
-
-````
+{ "count": 10 }
+```
 
 #### result
 
 ```json
-
 [
   {
     "message": "hello"
@@ -227,46 +207,29 @@ Copy2Array agent
     "message": "hello"
   }
 ]
+```
 
-````
 ### Sample2
 
 #### inputs
 
 ```json
-
 {
   "item": "hello"
 }
-
-````
+```
 
 #### params
 
 ```json
-
-{"count":10}
-
-````
+{ "count": 10 }
+```
 
 #### result
 
 ```json
-
-[
-  "hello",
-  "hello",
-  "hello",
-  "hello",
-  "hello",
-  "hello",
-  "hello",
-  "hello",
-  "hello",
-  "hello"
-]
-
-````
+["hello", "hello", "hello", "hello", "hello", "hello", "hello", "hello", "hello", "hello"]
+```
 
 ## Author
 
@@ -279,4 +242,3 @@ https://github.com/receptron/graphai
 ## License
 
 MIT
-

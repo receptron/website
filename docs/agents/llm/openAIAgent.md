@@ -9,7 +9,6 @@ OpenAI Agent
 #### inputs
 
 ```json
-
 {
   "type": "object",
   "properties": {
@@ -77,13 +76,11 @@ OpenAI Agent
     }
   }
 }
-
-````
+```
 
 #### output
 
 ```json
-
 {
   "type": "object",
   "properties": {
@@ -121,20 +118,12 @@ OpenAI Agent
                       "type": "string"
                     }
                   },
-                  "required": [
-                    "content",
-                    "role"
-                  ]
+                  "required": ["content", "role"]
                 }
               ]
             }
           },
-          "required": [
-            "index",
-            "message",
-            "logprobs",
-            "finish_reason"
-          ]
+          "required": ["index", "message", "logprobs", "finish_reason"]
         }
       ]
     },
@@ -151,11 +140,7 @@ OpenAI Agent
           "type": "integer"
         }
       },
-      "required": [
-        "prompt_tokens",
-        "completion_tokens",
-        "total_tokens"
-      ]
+      "required": ["prompt_tokens", "completion_tokens", "total_tokens"]
     },
     "text": {
       "type": "string"
@@ -178,28 +163,16 @@ OpenAI Agent
           "type": "string"
         }
       },
-      "required": [
-        "content",
-        "role"
-      ]
+      "required": ["content", "role"]
     }
   },
-  "required": [
-    "id",
-    "object",
-    "created",
-    "model",
-    "choices",
-    "usage"
-  ]
+  "required": ["id", "object", "created", "model", "choices", "usage"]
 }
-
-````
+```
 
 ## Input example of the next node
 
 ```json
-
 [
   ":agentId",
   ":agentId.object",
@@ -215,8 +188,7 @@ OpenAI Agent
   ":agentId.created",
   ":agentId.model"
 ]
-
-````
+```
 
 ## Samples
 
@@ -225,25 +197,20 @@ OpenAI Agent
 #### inputs
 
 ```json
-
 {
   "prompt": "this is response result"
 }
-
-````
+```
 
 #### params
 
 ```json
-
 {}
-
-````
+```
 
 #### result
 
 ```json
-
 {
   "object": "chat.completion",
   "id": "chatcmpl-9N7HxXYbwjmdbdiQE94MHoVluQhyt",
@@ -261,8 +228,7 @@ OpenAI Agent
   "created": 1715296589,
   "model": "gpt-4o"
 }
-
-````
+```
 
 ## Author
 
@@ -275,4 +241,3 @@ https://github.com/receptron/graphai
 ## License
 
 MIT
-

@@ -9,7 +9,6 @@ CopyMessage agent
 #### inputs
 
 ```json
-
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "description": "",
@@ -17,23 +16,13 @@ CopyMessage agent
   "properties": {},
   "required": []
 }
-
-````
+```
 
 ## Input example of the next node
 
 ```json
-
-[
-  ":agentId",
-  ":agentId.messages",
-  ":agentId.messages.$0",
-  ":agentId.messages.$1",
-  ":agentId.messages.$2",
-  ":agentId.messages.$3"
-]
-
-````
+[":agentId", ":agentId.messages", ":agentId.messages.$0", ":agentId.messages.$1", ":agentId.messages.$2", ":agentId.messages.$3"]
+```
 
 ## Samples
 
@@ -42,33 +31,22 @@ CopyMessage agent
 #### inputs
 
 ```json
-
 {}
-
-````
+```
 
 #### params
 
 ```json
-
-{"count":4,"message":"hello"}
-
-````
+{ "count": 4, "message": "hello" }
+```
 
 #### result
 
 ```json
-
 {
-  "messages": [
-    "hello",
-    "hello",
-    "hello",
-    "hello"
-  ]
+  "messages": ["hello", "hello", "hello", "hello"]
 }
-
-````
+```
 
 ## Author
 
@@ -81,4 +59,3 @@ https://github.com/receptron/graphai
 ## License
 
 MIT
-

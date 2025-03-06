@@ -9,7 +9,6 @@ Returns the sum of input values
 #### inputs
 
 ```json
-
 {
   "type": "object",
   "properties": {
@@ -21,70 +20,43 @@ Returns the sum of input values
       }
     }
   },
-  "required": [
-    "array"
-  ]
+  "required": ["array"]
 }
-
-````
+```
 
 #### output
 
 ```json
-
 {
   "type": "number"
 }
-
-````
+```
 
 ## Input example of the next node
 
 ```json
+[":agentId", ":agentId.result"]
+```
 
-[
-  ":agentId",
-  ":agentId.result"
-]
-
-````
 ```json
+[":agentId", ":agentId.result"]
+```
 
-[
-  ":agentId",
-  ":agentId.result"
-]
-
-````
 ```json
+[":agentId", ":agentId.result"]
+```
 
-[
-  ":agentId",
-  ":agentId.result"
-]
-
-````
 ```json
+[":agentId"]
+```
 
-[
-  ":agentId"
-]
-
-````
 ```json
+[":agentId"]
+```
 
-[
-  ":agentId"
-]
-
-````
 ```json
-
-[
-  ":agentId"
-]
-
-````
+[":agentId"]
+```
 
 ## Samples
 
@@ -93,187 +65,138 @@ Returns the sum of input values
 #### inputs
 
 ```json
-
 {
-  "array": [
-    1
-  ]
+  "array": [1]
 }
-
-````
+```
 
 #### params
 
 ```json
-
 {}
-
-````
+```
 
 #### result
 
 ```json
-
 {
   "result": 1
 }
+```
 
-````
 ### Sample1
 
 #### inputs
 
 ```json
-
 {
-  "array": [
-    1,
-    2
-  ]
+  "array": [1, 2]
 }
-
-````
+```
 
 #### params
 
 ```json
-
 {}
-
-````
+```
 
 #### result
 
 ```json
-
 {
   "result": 3
 }
+```
 
-````
 ### Sample2
 
 #### inputs
 
 ```json
-
 {
-  "array": [
-    1,
-    2,
-    3
-  ]
+  "array": [1, 2, 3]
 }
-
-````
+```
 
 #### params
 
 ```json
-
 {}
-
-````
+```
 
 #### result
 
 ```json
-
 {
   "result": 6
 }
+```
 
-````
 ### Sample3
 
 #### inputs
 
 ```json
-
 {
-  "array": [
-    1
-  ]
+  "array": [1]
 }
-
-````
+```
 
 #### params
 
 ```json
-
-{"flatResponse":true}
-
-````
+{ "flatResponse": true }
+```
 
 #### result
 
 ```json
-
 1
+```
 
-````
 ### Sample4
 
 #### inputs
 
 ```json
-
 {
-  "array": [
-    1,
-    2
-  ]
+  "array": [1, 2]
 }
-
-````
+```
 
 #### params
 
 ```json
-
-{"flatResponse":true}
-
-````
+{ "flatResponse": true }
+```
 
 #### result
 
 ```json
-
 3
+```
 
-````
 ### Sample5
 
 #### inputs
 
 ```json
-
 {
-  "array": [
-    1,
-    2,
-    3
-  ]
+  "array": [1, 2, 3]
 }
-
-````
+```
 
 #### params
 
 ```json
-
-{"flatResponse":true}
-
-````
+{ "flatResponse": true }
+```
 
 #### result
 
 ```json
-
 6
-
-````
+```
 
 ## Author
 
@@ -286,4 +209,3 @@ https://github.com/receptron/graphai
 ## License
 
 MIT
-

@@ -9,7 +9,6 @@ dotProduct Agent
 #### inputs
 
 ```json
-
 {
   "type": "object",
   "properties": {
@@ -31,45 +30,27 @@ dotProduct Agent
       }
     }
   },
-  "required": [
-    "matrix",
-    "vector"
-  ]
+  "required": ["matrix", "vector"]
 }
-
-````
+```
 
 #### output
 
 ```json
-
 {
   "type": "array"
 }
-
-````
+```
 
 ## Input example of the next node
 
 ```json
+[":agentId", ":agentId.$0", ":agentId.$1", ":agentId.$2"]
+```
 
-[
-  ":agentId",
-  ":agentId.$0",
-  ":agentId.$1",
-  ":agentId.$2"
-]
-
-````
 ```json
-
-[
-  ":agentId",
-  ":agentId.$0",
-  ":agentId.$1"
-]
-
-````
+[":agentId", ":agentId.$0", ":agentId.$1"]
+```
 
 ## Samples
 
@@ -78,92 +59,53 @@ dotProduct Agent
 #### inputs
 
 ```json
-
 {
   "matrix": [
-    [
-      1,
-      2
-    ],
-    [
-      3,
-      4
-    ],
-    [
-      5,
-      6
-    ]
+    [1, 2],
+    [3, 4],
+    [5, 6]
   ],
-  "vector": [
-    3,
-    2
-  ]
+  "vector": [3, 2]
 }
-
-````
+```
 
 #### params
 
 ```json
-
 {}
-
-````
+```
 
 #### result
 
 ```json
+[7, 17, 27]
+```
 
-[
-  7,
-  17,
-  27
-]
-
-````
 ### Sample1
 
 #### inputs
 
 ```json
-
 {
   "matrix": [
-    [
-      1,
-      2
-    ],
-    [
-      2,
-      3
-    ]
+    [1, 2],
+    [2, 3]
   ],
-  "vector": [
-    1,
-    2
-  ]
+  "vector": [1, 2]
 }
-
-````
+```
 
 #### params
 
 ```json
-
 {}
-
-````
+```
 
 #### result
 
 ```json
-
-[
-  5,
-  8
-]
-
-````
+[5, 8]
+```
 
 ## Author
 
@@ -176,4 +118,3 @@ https://github.com/receptron/graphai
 ## License
 
 MIT
-

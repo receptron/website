@@ -68,10 +68,10 @@ export const streamAgentFilterGenerator = <T>(callback: (context: AgentFunctionC
    Create a callback function that takes `context` and `data` as arguments. This function is invoked each time the agent receives data, allowing real-time processing.
 
 ```typescript
-   const myCallback = (context, data) => {
-     console.log("Data received:", data);
-     // Implement necessary processing here
-   };
+const myCallback = (context, data) => {
+  console.log("Data received:", data);
+  // Implement necessary processing here
+};
 ```
 
 2. **Obtain the streamAgentFilter**
@@ -110,24 +110,24 @@ Specific determination is made based on the presence of the following HTTP heade
 When operating GraphAI in the browser and agents on the server, you need to use both `streamAgentFilter` and `httpAgentFilter` together. The `httpAgentFilter` bypasses browser processing and executes the agent on the server. If the agent does not exist in the browser, skip agent validation using `bypassAgentIds`.
 
 ```typescript
-  const agentFilters = [
-    {
-      name: "streamAgentFilter",
-      agent: streamAgentFilter,
-      agentIds: streamAgents,
-    },
-    {
-      name: "httpAgentFilter",
-      agent: httpAgentFilter,
-      filterParams: {
-        server: {
-          baseUrl: "http://localhost:8085/agents",
-        },
+const agentFilters = [
+  {
+    name: "streamAgentFilter",
+    agent: streamAgentFilter,
+    agentIds: streamAgents,
+  },
+  {
+    name: "httpAgentFilter",
+    agent: httpAgentFilter,
+    filterParams: {
+      server: {
+        baseUrl: "http://localhost:8085/agents",
       },
-      agentIds: serverAgentIds,
     },
-  ];
-  const graphai = new GraphAI(selectedGraph.value, agents, { agentFilters, bypassAgentIds: serverAgentIds });
+    agentIds: serverAgentIds,
+  },
+];
+const graphai = new GraphAI(selectedGraph.value, agents, { agentFilters, bypassAgentIds: serverAgentIds });
 ```
 
 ## Reference Sources

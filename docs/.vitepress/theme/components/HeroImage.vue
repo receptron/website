@@ -24,8 +24,6 @@
 </template>
 
 <style scoped>
-
-
 .cube-container {
   --face-size: 100px;
   --translate-z: 50px;
@@ -73,7 +71,6 @@
   display: block;
   opacity: 0.75;
 }
-
 
 .front {
   transform: translateZ(var(--translate-z));

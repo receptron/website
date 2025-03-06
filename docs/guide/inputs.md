@@ -19,6 +19,7 @@
 ```
 
 ## data
+
 ```
 {
  data: object
@@ -26,6 +27,7 @@
 ```
 
 ## buffer
+
 ```
 {
   buffer: Buffer(node buffer or npm buffer)
@@ -68,7 +70,9 @@ Message is the format of data passed to the LLM history.
 ```
 
 ### meaningful parameters
+
 search query / wikipedia or serper
+
 ```
 {
   query: string,
@@ -76,6 +80,7 @@ search query / wikipedia or serper
 }
 
 ```
+
 tokenBoundStrings
 
 ```
@@ -84,9 +89,8 @@ tokenBoundStrings
 }
 ```
 
-
-
 ---
+
 ### Change from `inputs: []` array to `inputs: {}` object (dictionary) 22/sep/2024
 
 The input format has been updated from an `inputs: []` array to an `inputs: {}` object. Please update the `inputs` configuration for the following agents used in your graph data.
@@ -94,6 +98,7 @@ The input format has been updated from an `inputs: []` array to an `inputs: {}` 
 ---
 
 ## Change `inputs: []` array to `{}` object
+
 - `dataObjectMergeTemplateAgent`: `{array}`
 - `totalAgent`: `{array}`
 - `dataSumTemplateAgent`: `{array}`
@@ -105,22 +110,26 @@ The input format has been updated from an `inputs: []` array to an `inputs: {}` 
 ---
 
 ## Change `inputs[0]` to an object
+
 - `copyAgent`: `inputs[0]` -> object
 - `copy2ArrayAgent`: `inputs[0]` -> object
 
 ---
 
 ## Assign a new name when passing the `inputs[]` array
+
 - `wikipedia`: `{query}`
 
 ---
 
 ## Return the object as is
+
 - `bypassAgent`: object (returns as is)
 
 ---
 
 ## Specification Changes
+
 - `jsonParserAgent`:
   - Discontinue `params.stringify`
   - `{data}` -> stringify

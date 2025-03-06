@@ -9,7 +9,6 @@ Counting agent
 #### inputs
 
 ```json
-
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "description": "",
@@ -17,23 +16,13 @@ Counting agent
   "properties": {},
   "required": []
 }
-
-````
+```
 
 ## Input example of the next node
 
 ```json
-
-[
-  ":agentId",
-  ":agentId.list",
-  ":agentId.list.$0",
-  ":agentId.list.$1",
-  ":agentId.list.$2",
-  ":agentId.list.$3"
-]
-
-````
+[":agentId", ":agentId.list", ":agentId.list.$0", ":agentId.list.$1", ":agentId.list.$2", ":agentId.list.$3"]
+```
 
 ## Samples
 
@@ -42,33 +31,22 @@ Counting agent
 #### inputs
 
 ```json
-
 {}
-
-````
+```
 
 #### params
 
 ```json
-
-{"count":4}
-
-````
+{ "count": 4 }
+```
 
 #### result
 
 ```json
-
 {
-  "list": [
-    0,
-    1,
-    2,
-    3
-  ]
+  "list": [0, 1, 2, 3]
 }
-
-````
+```
 
 ## Author
 
@@ -81,4 +59,3 @@ https://github.com/receptron/graphai
 ## License
 
 MIT
-

@@ -9,7 +9,6 @@ sleeper Agent
 #### inputs
 
 ```json
-
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "description": "",
@@ -17,30 +16,17 @@ sleeper Agent
   "properties": {},
   "required": []
 }
-
-````
+```
 
 ## Input example of the next node
 
 ```json
+[":agentId"]
+```
 
-[
-  ":agentId"
-]
-
-````
 ```json
-
-[
-  ":agentId",
-  ":agentId.array",
-  ":agentId.array.$0",
-  ":agentId.array.$0.a",
-  ":agentId.array.$1",
-  ":agentId.array.$1.b"
-]
-
-````
+[":agentId", ":agentId.array", ":agentId.array.$0", ":agentId.array.$0.a", ":agentId.array.$1", ":agentId.array.$1.b"]
+```
 
 ## Samples
 
@@ -49,32 +35,26 @@ sleeper Agent
 #### inputs
 
 ```json
-
 {}
-
-````
+```
 
 #### params
 
 ```json
-
-{"duration":1}
-
-````
+{ "duration": 1 }
+```
 
 #### result
 
 ```json
-
 {}
+```
 
-````
 ### Sample1
 
 #### inputs
 
 ```json
-
 {
   "array": [
     {
@@ -85,21 +65,17 @@ sleeper Agent
     }
   ]
 }
-
-````
+```
 
 #### params
 
 ```json
-
-{"duration":1}
-
-````
+{ "duration": 1 }
+```
 
 #### result
 
 ```json
-
 {
   "array": [
     {
@@ -110,8 +86,7 @@ sleeper Agent
     }
   ]
 }
-
-````
+```
 
 ## Author
 
@@ -124,4 +99,3 @@ https://github.com/receptron/graphai
 ## License
 
 MIT
-

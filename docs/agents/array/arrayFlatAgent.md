@@ -9,7 +9,6 @@ Array Flat Agent
 #### inputs
 
 ```json
-
 {
   "type": "object",
   "properties": {
@@ -18,17 +17,13 @@ Array Flat Agent
       "description": "flat array"
     }
   },
-  "required": [
-    "array"
-  ]
+  "required": ["array"]
 }
-
-````
+```
 
 #### output
 
 ```json
-
 {
   "type": "object",
   "properties": {
@@ -38,56 +33,25 @@ Array Flat Agent
     }
   }
 }
-
-````
+```
 
 ## Input example of the next node
 
 ```json
+[":agentId", ":agentId.array", ":agentId.array.$0", ":agentId.array.$1", ":agentId.array.$2"]
+```
 
-[
-  ":agentId",
-  ":agentId.array",
-  ":agentId.array.$0",
-  ":agentId.array.$1",
-  ":agentId.array.$2"
-]
-
-````
 ```json
+[":agentId", ":agentId.array", ":agentId.array.$0", ":agentId.array.$1", ":agentId.array.$2", ":agentId.array.$2.$0"]
+```
 
-[
-  ":agentId",
-  ":agentId.array",
-  ":agentId.array.$0",
-  ":agentId.array.$1",
-  ":agentId.array.$2",
-  ":agentId.array.$2.$0"
-]
-
-````
 ```json
+[":agentId", ":agentId.array", ":agentId.array.$0", ":agentId.array.$1", ":agentId.array.$2"]
+```
 
-[
-  ":agentId",
-  ":agentId.array",
-  ":agentId.array.$0",
-  ":agentId.array.$1",
-  ":agentId.array.$2"
-]
-
-````
 ```json
-
-[
-  ":agentId",
-  ":agentId.array",
-  ":agentId.array.$0",
-  ":agentId.array.$1",
-  ":agentId.array.$2"
-]
-
-````
+[":agentId", ":agentId.array", ":agentId.array.$0", ":agentId.array.$1", ":agentId.array.$2"]
+```
 
 ## Samples
 
@@ -96,179 +60,96 @@ Array Flat Agent
 #### inputs
 
 ```json
-
 {
-  "array": [
-    [
-      1
-    ],
-    [
-      2
-    ],
-    [
-      3
-    ]
-  ]
+  "array": [[1], [2], [3]]
 }
-
-````
+```
 
 #### params
 
 ```json
-
 {}
-
-````
+```
 
 #### result
 
 ```json
-
 {
-  "array": [
-    1,
-    2,
-    3
-  ]
+  "array": [1, 2, 3]
 }
+```
 
-````
 ### Sample1
 
 #### inputs
 
 ```json
-
 {
-  "array": [
-    [
-      1
-    ],
-    [
-      2
-    ],
-    [
-      [
-        3
-      ]
-    ]
-  ]
+  "array": [[1], [2], [[3]]]
 }
-
-````
+```
 
 #### params
 
 ```json
-
 {}
-
-````
+```
 
 #### result
 
 ```json
-
 {
-  "array": [
-    1,
-    2,
-    [
-      3
-    ]
-  ]
+  "array": [1, 2, [3]]
 }
+```
 
-````
 ### Sample2
 
 #### inputs
 
 ```json
-
 {
-  "array": [
-    [
-      1
-    ],
-    [
-      2
-    ],
-    [
-      [
-        3
-      ]
-    ]
-  ]
+  "array": [[1], [2], [[3]]]
 }
-
-````
+```
 
 #### params
 
 ```json
-
-{"depth":2}
-
-````
+{ "depth": 2 }
+```
 
 #### result
 
 ```json
-
 {
-  "array": [
-    1,
-    2,
-    3
-  ]
+  "array": [1, 2, 3]
 }
+```
 
-````
 ### Sample3
 
 #### inputs
 
 ```json
-
 {
-  "array": [
-    [
-      "a"
-    ],
-    [
-      "b"
-    ],
-    [
-      "c"
-    ]
-  ]
+  "array": [["a"], ["b"], ["c"]]
 }
-
-````
+```
 
 #### params
 
 ```json
-
 {}
-
-````
+```
 
 #### result
 
 ```json
-
 {
-  "array": [
-    "a",
-    "b",
-    "c"
-  ]
+  "array": ["a", "b", "c"]
 }
-
-````
+```
 
 ## Author
 
@@ -281,4 +162,3 @@ https://github.com/receptron/graphai
 ## License
 
 MIT
-

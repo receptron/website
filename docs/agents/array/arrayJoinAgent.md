@@ -9,7 +9,6 @@ Array Join Agent
 #### inputs
 
 ```json
-
 {
   "type": "object",
   "properties": {
@@ -18,17 +17,13 @@ Array Join Agent
       "description": "array join"
     }
   },
-  "required": [
-    "array"
-  ]
+  "required": ["array"]
 }
-
-````
+```
 
 #### output
 
 ```json
-
 {
   "type": "object",
   "properties": {
@@ -38,75 +33,41 @@ Array Join Agent
     }
   }
 }
-
-````
+```
 
 ## Input example of the next node
 
 ```json
+[":agentId", ":agentId.text"]
+```
 
-[
-  ":agentId",
-  ":agentId.text"
-]
-
-````
 ```json
+[":agentId", ":agentId.text"]
+```
 
-[
-  ":agentId",
-  ":agentId.text"
-]
-
-````
 ```json
+[":agentId", ":agentId.text"]
+```
 
-[
-  ":agentId",
-  ":agentId.text"
-]
-
-````
 ```json
+[":agentId", ":agentId.text"]
+```
 
-[
-  ":agentId",
-  ":agentId.text"
-]
-
-````
 ```json
+[":agentId", ":agentId.text"]
+```
 
-[
-  ":agentId",
-  ":agentId.text"
-]
-
-````
 ```json
+[":agentId", ":agentId.text"]
+```
 
-[
-  ":agentId",
-  ":agentId.text"
-]
-
-````
 ```json
+[":agentId", ":agentId.text"]
+```
 
-[
-  ":agentId",
-  ":agentId.text"
-]
-
-````
 ```json
-
-[
-  ":agentId",
-  ":agentId.text"
-]
-
-````
+[":agentId", ":agentId.text"]
+```
 
 ## Samples
 
@@ -115,335 +76,192 @@ Array Join Agent
 #### inputs
 
 ```json
-
 {
-  "array": [
-    [
-      1
-    ],
-    [
-      2
-    ],
-    [
-      3
-    ]
-  ]
+  "array": [[1], [2], [3]]
 }
-
-````
+```
 
 #### params
 
 ```json
-
 {}
-
-````
+```
 
 #### result
 
 ```json
-
 {
   "text": "123"
 }
+```
 
-````
 ### Sample1
 
 #### inputs
 
 ```json
-
 {
-  "array": [
-    [
-      1
-    ],
-    [
-      2
-    ],
-    [
-      [
-        3
-      ]
-    ]
-  ]
+  "array": [[1], [2], [[3]]]
 }
-
-````
+```
 
 #### params
 
 ```json
-
 {}
-
-````
+```
 
 #### result
 
 ```json
-
 {
   "text": "123"
 }
+```
 
-````
 ### Sample2
 
 #### inputs
 
 ```json
-
 {
-  "array": [
-    [
-      "a"
-    ],
-    [
-      "b"
-    ],
-    [
-      "c"
-    ]
-  ]
+  "array": [["a"], ["b"], ["c"]]
 }
-
-````
+```
 
 #### params
 
 ```json
-
 {}
-
-````
+```
 
 #### result
 
 ```json
-
 {
   "text": "abc"
 }
+```
 
-````
 ### Sample3
 
 #### inputs
 
 ```json
-
 {
-  "array": [
-    [
-      1
-    ],
-    [
-      2
-    ],
-    [
-      3
-    ]
-  ]
+  "array": [[1], [2], [3]]
 }
-
-````
+```
 
 #### params
 
 ```json
-
-{"separator":"|"}
-
-````
+{ "separator": "|" }
+```
 
 #### result
 
 ```json
-
 {
   "text": "1|2|3"
 }
+```
 
-````
 ### Sample4
 
 #### inputs
 
 ```json
-
 {
-  "array": [
-    [
-      [
-        1
-      ]
-    ],
-    [
-      [
-        2
-      ],
-      [
-        3
-      ]
-    ]
-  ]
+  "array": [[[1]], [[2], [3]]]
 }
-
-````
+```
 
 #### params
 
 ```json
-
-{"separator":"|"}
-
-````
+{ "separator": "|" }
+```
 
 #### result
 
 ```json
-
 {
   "text": "1|2,3"
 }
+```
 
-````
 ### Sample5
 
 #### inputs
 
 ```json
-
 {
-  "array": [
-    [
-      [
-        1
-      ]
-    ],
-    [
-      [
-        2
-      ],
-      [
-        3
-      ]
-    ]
-  ]
+  "array": [[[1]], [[2], [3]]]
 }
-
-````
+```
 
 #### params
 
 ```json
-
-{"separator":"|","flat":1}
-
-````
+{ "separator": "|", "flat": 1 }
+```
 
 #### result
 
 ```json
-
 {
   "text": "1|2|3"
 }
+```
 
-````
 ### Sample6
 
 #### inputs
 
 ```json
-
 {
-  "array": [
-    [
-      [
-        [
-          1
-        ]
-      ],
-      [
-        [
-          2
-        ],
-        [
-          3
-        ]
-      ]
-    ]
-  ]
+  "array": [[[[1]], [[2], [3]]]]
 }
-
-````
+```
 
 #### params
 
 ```json
-
-{"separator":"|","flat":1}
-
-````
+{ "separator": "|", "flat": 1 }
+```
 
 #### result
 
 ```json
-
 {
   "text": "1|2,3"
 }
+```
 
-````
 ### Sample7
 
 #### inputs
 
 ```json
-
 {
-  "array": [
-    [
-      [
-        [
-          1
-        ]
-      ],
-      [
-        [
-          2
-        ],
-        [
-          3
-        ]
-      ]
-    ]
-  ]
+  "array": [[[[1]], [[2], [3]]]]
 }
-
-````
+```
 
 #### params
 
 ```json
-
-{"separator":"|","flat":2}
-
-````
+{ "separator": "|", "flat": 2 }
+```
 
 #### result
 
 ```json
-
 {
   "text": "1|2|3"
 }
-
-````
+```
 
 ## Author
 
@@ -456,4 +274,3 @@ https://github.com/receptron/graphai
 ## License
 
 MIT
-

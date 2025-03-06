@@ -77,9 +77,9 @@ nodes:
       query: describe the final sentence by the court for Sam Bankman-Fried
   wikipedia: # (2)
     agentId: wikipediaAgent
-    inputs: 
+    inputs:
       query: :source.name
-  chunks: # (3) 
+  chunks: # (3)
     agentId: stringSplitterAgent
     inputs:
       text: :wikipedia.content
@@ -87,7 +87,7 @@ nodes:
     agentId: stringEmbeddingsAgent
     inputs:
       array: :chunks.contents
-  topicEmbedding: # (5) 
+  topicEmbedding: # (5)
     agentId: stringEmbeddingsAgent
     inputs:
       item: :source.topic
@@ -96,18 +96,18 @@ nodes:
     inputs:
       matrix: :chunkEmbeddings
       vector: :topicEmbedding.$0
-  sortedChunks: # (7) 
+  sortedChunks: # (7)
     agentId: sortByValuesAgent
     inputs:
       array: :chunks.contents
       values: :similarities
-  referenceText: # (8) 
+  referenceText: # (8)
     agentId: tokenBoundStringsAgent
     inputs:
       array: :sortedChunks
     params:
       limit: 5000
-  prompt: # (9) 
+  prompt: # (9)
     agentId: stringTemplateAgent
     inputs:
       prompt: :source.query
@@ -125,15 +125,15 @@ nodes:
       prompt: :prompt
 ```
 
-This application consists of 10 nodes. Each node responsible in either holding a data (*static data*) or performing some computations (*computed data*). A *computation node* is associated with a piece of code (*agent function*), which is specified by its *agentId* property. The *inputs* property of a *computation node* specifies the data sources for this node. 
+This application consists of 10 nodes. Each node responsible in either holding a data (_static data_) or performing some computations (_computed data_). A _computation node_ is associated with a piece of code (_agent function_), which is specified by its _agentId_ property. The _inputs_ property of a _computation node_ specifies the data sources for this node.
 
 1. "source" node: This is the input data to this RAG application. In the real application, this data will come from the outside of the application, such as the user.
 2. "wikipedia" node: This node retrieves data from Wikipedia. The data source is the "name" property of the "source" property ("Sam Bankman-Fried"). The agent function associated with this node, "wikipediaAgent" passes the value from this data source to Wikipedia API and retrieves the content of the article of that topic.
 3. "chunks" node: This node receives the text data from the "wikipedia" node, and breaks it into overlapping text chunks, using the agent function, "stringSplitterAgent". The default size is 2048 character each and 512 character overlap, but can be altered by setting the params property.
 4. "chunkEmbeddings" node: This node converts text chunks from the "chunks" node into embedding vectors. The associated "stringEmbeddingsAgent" calls OpenAI's "embeddings" API to perform this operation.
 5. "topicEmbedding" node: This node converts the "query" property of the "source" node ("describe the final sentence by the court for Sam Bank-Frie") into an embedding vectors, also using "stringEmbeddingsAgent".
-6. "similarities" node: This node calculate the cosine similarities of each embedding vector of chunks and the embedding vector of the query, performing the dot product of each. 
-7. "sortedChunks" node: This node sorts chunks using the similarities as the sort key, putting more similar chunks to the top. 
+6. "similarities" node: This node calculate the cosine similarities of each embedding vector of chunks and the embedding vector of the query, performing the dot product of each.
+7. "sortedChunks" node: This node sorts chunks using the similarities as the sort key, putting more similar chunks to the top.
 8. "referenceText" node: This node generate a reference text by concatenate sorted chunks up to the token limit (5000, which is specified in the "params" property).
 9. "prompt" node: This node generates a prompt using the specified template, using the data from "source" node and "referenceText" node.
 10. "query" node: This node sends the output from "prompt" node to OpenAI's "chatCompletion" API using "openAIAgent".
@@ -191,7 +191,7 @@ nodes:
       nodes:
         subTask1:
           agent: subTaskAgent1
-          inputs: 
+          inputs:
             param1: :param1
         subTask2:
           agent: subTaskAgent2
@@ -222,13 +222,13 @@ nodes:
     value: [data1, data2, data3]
   mapper:
     agent: mapAgent
-    inputs: 
+    inputs:
       rows: :dataList
     graph:
       nodes:
         mapTask:
           agent: processDataAgent
-          inputs: 
+          inputs:
             param1: :row
           isResult: true
 ```
@@ -270,25 +270,25 @@ To illustrate the power of data flow programming in GraphAI, consider the follow
 
 ```YAML
 nodes:
-  users: 
+  users:
     value: ["Alice", "Bob", "Charlie"]
-  userProfiles: 
+  userProfiles:
     agent: "mapAgent"
-    inputs: 
+    inputs:
       rows: ":users"
     graph:
       nodes:
-        profile: 
+        profile:
           agent: fetchUserProfile
-          inputs: 
+          inputs:
             userName: :row
-        posts: 
+        posts:
           agent: fetchUserPosts
           inputs:
             userName: ":row"
-        combinedData: 
+        combinedData:
           agent: combineData
-          inputs: 
+          inputs:
             profile: :profile
             posts: :posts
           isResult: true
@@ -303,7 +303,7 @@ This graph performs the following operations:
 - posts: Fetches the user's posts.
 - combinedData: Combines the profile data and posts into a single output.
 
-The nested graph for each user runs concurrently, allowing multiple user profiles to be processed simultaneously. 
+The nested graph for each user runs concurrently, allowing multiple user profiles to be processed simultaneously.
 
 The mapAgent ensures that each user's profile and posts are fetched concurrently. The combineData function then merges the results, and the final output is collected as the result of the userProfiles node.
 

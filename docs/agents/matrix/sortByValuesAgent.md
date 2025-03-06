@@ -9,7 +9,6 @@ sortByValues Agent
 #### inputs
 
 ```json
-
 {
   "type": "object",
   "properties": {
@@ -22,48 +21,27 @@ sortByValues Agent
       "description": "values associated with items in the array"
     }
   },
-  "required": [
-    "array",
-    "values"
-  ]
+  "required": ["array", "values"]
 }
-
-````
+```
 
 #### output
 
 ```json
-
 {
   "type": "array"
 }
-
-````
+```
 
 ## Input example of the next node
 
 ```json
+[":agentId", ":agentId.$0", ":agentId.$1", ":agentId.$2", ":agentId.$3"]
+```
 
-[
-  ":agentId",
-  ":agentId.$0",
-  ":agentId.$1",
-  ":agentId.$2",
-  ":agentId.$3"
-]
-
-````
 ```json
-
-[
-  ":agentId",
-  ":agentId.$0",
-  ":agentId.$1",
-  ":agentId.$2",
-  ":agentId.$3"
-]
-
-````
+[":agentId", ":agentId.$0", ":agentId.$1", ":agentId.$2", ":agentId.$3"]
+```
 
 ## Samples
 
@@ -72,87 +50,46 @@ sortByValues Agent
 #### inputs
 
 ```json
-
 {
-  "array": [
-    "banana",
-    "orange",
-    "lemon",
-    "apple"
-  ],
-  "values": [
-    2,
-    5,
-    6,
-    4
-  ]
+  "array": ["banana", "orange", "lemon", "apple"],
+  "values": [2, 5, 6, 4]
 }
-
-````
+```
 
 #### params
 
 ```json
-
 {}
-
-````
+```
 
 #### result
 
 ```json
+["lemon", "orange", "apple", "banana"]
+```
 
-[
-  "lemon",
-  "orange",
-  "apple",
-  "banana"
-]
-
-````
 ### Sample1
 
 #### inputs
 
 ```json
-
 {
-  "array": [
-    "banana",
-    "orange",
-    "lemon",
-    "apple"
-  ],
-  "values": [
-    2,
-    5,
-    6,
-    4
-  ]
+  "array": ["banana", "orange", "lemon", "apple"],
+  "values": [2, 5, 6, 4]
 }
-
-````
+```
 
 #### params
 
 ```json
-
-{"assendant":true}
-
-````
+{ "assendant": true }
+```
 
 #### result
 
 ```json
-
-[
-  "banana",
-  "apple",
-  "orange",
-  "lemon"
-]
-
-````
+["banana", "apple", "orange", "lemon"]
+```
 
 ## Author
 
@@ -165,4 +102,3 @@ https://github.com/receptron/graphai
 ## License
 
 MIT
-

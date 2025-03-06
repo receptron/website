@@ -9,7 +9,6 @@ Retrieves JSON data from the specified URL
 #### inputs
 
 ```json
-
 {
   "type": "object",
   "properties": {
@@ -41,49 +40,27 @@ Retrieves JSON data from the specified URL
       "description": "body"
     }
   },
-  "required": [
-    "url"
-  ]
+  "required": ["url"]
 }
-
-````
+```
 
 #### output
 
 ```json
-
 {
   "type": "array"
 }
-
-````
+```
 
 ## Input example of the next node
 
 ```json
+[":agentId", ":agentId.method", ":agentId.url", ":agentId.headers", ":agentId.headers.x-myHeader", ":agentId.body"]
+```
 
-[
-  ":agentId",
-  ":agentId.method",
-  ":agentId.url",
-  ":agentId.headers",
-  ":agentId.headers.x-myHeader",
-  ":agentId.body"
-]
-
-````
 ```json
-
-[
-  ":agentId",
-  ":agentId.method",
-  ":agentId.url",
-  ":agentId.headers",
-  ":agentId.headers.Content-Type",
-  ":agentId.body"
-]
-
-````
+[":agentId", ":agentId.method", ":agentId.url", ":agentId.headers", ":agentId.headers.Content-Type", ":agentId.body"]
+```
 
 ## Samples
 
@@ -92,7 +69,6 @@ Retrieves JSON data from the specified URL
 #### inputs
 
 ```json
-
 {
   "url": "https://www.google.com",
   "queryParams": {
@@ -102,21 +78,17 @@ Retrieves JSON data from the specified URL
     "x-myHeader": "secret"
   }
 }
-
-````
+```
 
 #### params
 
 ```json
-
-{"debug":true}
-
-````
+{ "debug": true }
+```
 
 #### result
 
 ```json
-
 {
   "method": "GET",
   "url": "https://www.google.com/?foo=bar",
@@ -124,35 +96,30 @@ Retrieves JSON data from the specified URL
     "x-myHeader": "secret"
   }
 }
+```
 
-````
 ### Sample1
 
 #### inputs
 
 ```json
-
 {
   "url": "https://www.google.com",
   "body": {
     "foo": "bar"
   }
 }
-
-````
+```
 
 #### params
 
 ```json
-
-{"debug":true}
-
-````
+{ "debug": true }
+```
 
 #### result
 
 ```json
-
 {
   "method": "POST",
   "url": "https://www.google.com/",
@@ -161,8 +128,7 @@ Retrieves JSON data from the specified URL
   },
   "body": "{\"foo\":\"bar\"}"
 }
-
-````
+```
 
 ## Author
 
@@ -175,4 +141,3 @@ https://github.com/receptron/graphai
 ## License
 
 MIT
-

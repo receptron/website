@@ -9,7 +9,6 @@ Template agent
 #### inputs
 
 ```json
-
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "description": "",
@@ -24,63 +23,33 @@ Template agent
       "minLength": 1
     }
   },
-  "required": [
-    "message1",
-    "message2"
-  ]
+  "required": ["message1", "message2"]
 }
-
-````
+```
 
 ## Input example of the next node
 
 ```json
+[":agentId"]
+```
 
-[
-  ":agentId"
-]
-
-````
 ```json
+[":agentId", ":agentId.$0", ":agentId.$1"]
+```
 
-[
-  ":agentId",
-  ":agentId.$0",
-  ":agentId.$1"
-]
-
-````
 ```json
+[":agentId", ":agentId.apple", ":agentId.lemon"]
+```
 
-[
-  ":agentId",
-  ":agentId.apple",
-  ":agentId.lemon"
-]
-
-````
 ```json
+[":agentId", ":agentId.$0", ":agentId.$0.apple", ":agentId.$0.lemon"]
+```
 
-[
-  ":agentId",
-  ":agentId.$0",
-  ":agentId.$0.apple",
-  ":agentId.$0.lemon"
-]
-
-````
 ```json
+[":agentId", ":agentId.apple", ":agentId.lemon", ":agentId.lemon.$0"]
+```
 
-[
-  ":agentId",
-  ":agentId.apple",
-  ":agentId.lemon",
-  ":agentId.lemon.$0"
-]
-
-````
 ```json
-
 [
   ":agentId",
   ":agentId.nodes",
@@ -93,8 +62,7 @@ Template agent
   ":agentId.nodes.ai.params.text",
   ":agentId.version"
 ]
-
-````
+```
 
 ## Samples
 
@@ -103,163 +71,132 @@ Template agent
 #### inputs
 
 ```json
-
 {
   "message1": "hello",
   "message2": "test"
 }
-
-````
+```
 
 #### params
 
 ```json
-
-{"template":"${message1}: ${message2}"}
-
-````
+{ "template": "${message1}: ${message2}" }
+```
 
 #### result
 
 ```json
-
 "hello: test"
+```
 
-````
 ### Sample1
 
 #### inputs
 
 ```json
-
 {
   "message1": "hello",
   "message2": "test"
 }
-
-````
+```
 
 #### params
 
 ```json
-
-{"template":["${message1}: ${message2}","${message2}: ${message1}"]}
-
-````
+{ "template": ["${message1}: ${message2}", "${message2}: ${message1}"] }
+```
 
 #### result
 
 ```json
+["hello: test", "test: hello"]
+```
 
-[
-  "hello: test",
-  "test: hello"
-]
-
-````
 ### Sample2
 
 #### inputs
 
 ```json
-
 {
   "message1": "hello",
   "message2": "test"
 }
-
-````
+```
 
 #### params
 
 ```json
-
-{"template":{"apple":"${message1}","lemon":"${message2}"}}
-
-````
+{ "template": { "apple": "${message1}", "lemon": "${message2}" } }
+```
 
 #### result
 
 ```json
-
 {
   "apple": "hello",
   "lemon": "test"
 }
+```
 
-````
 ### Sample3
 
 #### inputs
 
 ```json
-
 {
   "message1": "hello",
   "message2": "test"
 }
-
-````
+```
 
 #### params
 
 ```json
-
-{"template":[{"apple":"${message1}","lemon":"${message2}"}]}
-
-````
+{ "template": [{ "apple": "${message1}", "lemon": "${message2}" }] }
+```
 
 #### result
 
 ```json
-
 [
   {
     "apple": "hello",
     "lemon": "test"
   }
 ]
+```
 
-````
 ### Sample4
 
 #### inputs
 
 ```json
-
 {
   "message1": "hello",
   "message2": "test"
 }
-
-````
+```
 
 #### params
 
 ```json
-
-{"template":{"apple":"${message1}","lemon":["${message2}"]}}
-
-````
+{ "template": { "apple": "${message1}", "lemon": ["${message2}"] } }
+```
 
 #### result
 
 ```json
-
 {
   "apple": "hello",
-  "lemon": [
-    "test"
-  ]
+  "lemon": ["test"]
 }
+```
 
-````
 ### Sample5
 
 #### inputs
 
 ```json
-
 {
   "agent": "openAiAgent",
   "row": "hello world",
@@ -267,21 +204,17 @@ Template agent
     "text": "message"
   }
 }
-
-````
+```
 
 #### params
 
 ```json
-
-{"template":{"version":0.5,"nodes":{"ai":{"agent":"${agent}","isResult":true,"params":"${params}","inputs":{"prompt":"${row}"}}}}}
-
-````
+{ "template": { "version": 0.5, "nodes": { "ai": { "agent": "${agent}", "isResult": true, "params": "${params}", "inputs": { "prompt": "${row}" } } } } }
+```
 
 #### result
 
 ```json
-
 {
   "nodes": {
     "ai": {
@@ -297,8 +230,7 @@ Template agent
   },
   "version": 0.5
 }
-
-````
+```
 
 ## Author
 
@@ -311,4 +243,3 @@ https://github.com/receptron/graphai
 ## License
 
 MIT
-

@@ -9,7 +9,6 @@ nested Agent
 #### inputs
 
 ```json
-
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "description": "",
@@ -20,24 +19,15 @@ nested Agent
       "minLength": 1
     }
   },
-  "required": [
-    "message"
-  ]
+  "required": ["message"]
 }
-
-````
+```
 
 ## Input example of the next node
 
 ```json
-
-[
-  ":agentId",
-  ":agentId.test",
-  ":agentId.test.$0"
-]
-
-````
+[":agentId", ":agentId.test", ":agentId.test.$0"]
+```
 
 ## Samples
 
@@ -46,32 +36,24 @@ nested Agent
 #### inputs
 
 ```json
-
 {
   "message": "hello"
 }
-
-````
+```
 
 #### params
 
 ```json
-
 {}
-
-````
+```
 
 #### result
 
 ```json
-
 {
-  "test": [
-    "hello"
-  ]
+  "test": ["hello"]
 }
-
-````
+```
 
 ## Author
 
@@ -84,4 +66,3 @@ https://github.com/receptron/graphai
 ## License
 
 MIT
-

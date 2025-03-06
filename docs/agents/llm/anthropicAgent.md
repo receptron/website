@@ -9,7 +9,6 @@ Anthropic Agent
 #### inputs
 
 ```json
-
 {
   "type": "object",
   "properties": {
@@ -48,26 +47,19 @@ Anthropic Agent
     }
   }
 }
-
-````
+```
 
 #### output
 
 ```json
-
 {
   "type": "object"
 }
-
-````
+```
 
 ## Input example of the next node
 
-
-
 ## Samples
-
-
 
 ## Author
 
@@ -80,4 +72,3 @@ https://github.com/receptron/graphai
 ## License
 
 MIT
-

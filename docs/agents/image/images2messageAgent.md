@@ -9,7 +9,6 @@ Returns the message data for llm include image
 #### inputs
 
 ```json
-
 {
   "type": "object",
   "properties": {
@@ -22,27 +21,21 @@ Returns the message data for llm include image
       "description": "prompt message"
     }
   },
-  "required": [
-    "array"
-  ]
+  "required": ["array"]
 }
-
-````
+```
 
 #### output
 
 ```json
-
 {
   "type": "object"
 }
-
-````
+```
 
 ## Input example of the next node
 
 ```json
-
 [
   ":agentId",
   ":agentId.message",
@@ -59,10 +52,9 @@ Returns the message data for llm include image
   ":agentId.message.content.$1.type",
   ":agentId.message.role"
 ]
+```
 
-````
 ```json
-
 [
   ":agentId",
   ":agentId.message",
@@ -82,10 +74,9 @@ Returns the message data for llm include image
   ":agentId.message.content.$2.type",
   ":agentId.message.role"
 ]
+```
 
-````
 ```json
-
 [
   ":agentId",
   ":agentId.message",
@@ -100,8 +91,7 @@ Returns the message data for llm include image
   ":agentId.message.content.$1.type",
   ":agentId.message.role"
 ]
-
-````
+```
 
 ## Samples
 
@@ -110,28 +100,20 @@ Returns the message data for llm include image
 #### inputs
 
 ```json
-
 {
-  "array": [
-    "abcabc",
-    "122123"
-  ]
+  "array": ["abcabc", "122123"]
 }
-
-````
+```
 
 #### params
 
 ```json
-
-{"imageType":"png"}
-
-````
+{ "imageType": "png" }
+```
 
 #### result
 
 ```json
-
 {
   "message": {
     "content": [
@@ -153,36 +135,28 @@ Returns the message data for llm include image
     "role": "user"
   }
 }
+```
 
-````
 ### Sample1
 
 #### inputs
 
 ```json
-
 {
-  "array": [
-    "abcabc",
-    "122123"
-  ],
+  "array": ["abcabc", "122123"],
   "prompt": "hello"
 }
-
-````
+```
 
 #### params
 
 ```json
-
-{"imageType":"jpg","detail":"high"}
-
-````
+{ "imageType": "jpg", "detail": "high" }
+```
 
 #### result
 
 ```json
-
 {
   "message": {
     "content": [
@@ -208,35 +182,27 @@ Returns the message data for llm include image
     "role": "user"
   }
 }
+```
 
-````
 ### Sample2
 
 #### inputs
 
 ```json
-
 {
-  "array": [
-    "http://example.com/1.jpg",
-    "http://example.com/2.jpg"
-  ]
+  "array": ["http://example.com/1.jpg", "http://example.com/2.jpg"]
 }
-
-````
+```
 
 #### params
 
 ```json
-
-{"imageType":"http"}
-
-````
+{ "imageType": "http" }
+```
 
 #### result
 
 ```json
-
 {
   "message": {
     "content": [
@@ -256,8 +222,7 @@ Returns the message data for llm include image
     "role": "user"
   }
 }
-
-````
+```
 
 ## Author
 
@@ -270,4 +235,3 @@ https://github.com/snakajima/graphai
 ## License
 
 MIT
-

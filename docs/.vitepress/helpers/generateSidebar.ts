@@ -4,17 +4,13 @@ import fs from "fs";
 // Function to generate a title from a filename
 const generateTitleFromFilename = (filename: string): string => {
   // Remove .md extension and replace dashes and underscores with spaces
-  const basename = path.basename(filename, '.md')
-    .replace(/[-_]/g, ' ');
+  const basename = path.basename(filename, ".md").replace(/[-_]/g, " ");
 
   // Capitalize the first letter of each word
-  return basename
+  return basename;
 };
 
-export const generateSidebar = (
-  dirRelativePath: string,
-  sidebarTitle: string,
-) => {
+export const generateSidebar = (dirRelativePath: string, sidebarTitle: string) => {
   const targetDir = path.resolve(__dirname, `../../${dirRelativePath}`);
   const categories = new Map();
 
@@ -24,13 +20,13 @@ export const generateSidebar = (
   const rootFiles: string[] = [];
 
   // Classify items into directories and files
-  dirItems.forEach(item => {
+  dirItems.forEach((item) => {
     const itemPath = path.join(targetDir, item);
     const stats = fs.statSync(itemPath);
 
-    if (stats.isDirectory() && !item.startsWith('.')) {
+    if (stats.isDirectory() && !item.startsWith(".")) {
       directories.push(item);
-    } else if (stats.isFile() && item.endsWith('.md') && item !== 'index.md') {
+    } else if (stats.isFile() && item.endsWith(".md") && item !== "index.md") {
       rootFiles.push(item);
     }
   });
@@ -38,29 +34,29 @@ export const generateSidebar = (
   // Process as usual if subdirectories exist
   if (directories.length > 0) {
     // Add subdirectories as categories
-    directories.forEach(dir => {
+    directories.forEach((dir) => {
       const categoryName = generateTitleFromFilename(dir);
       categories.set(categoryName, []);
     });
 
     // Add files to each category
     for (const [categoryName, items] of categories.entries()) {
-      const categoryDirPath = path.join(targetDir, categoryName.toLowerCase().replace(/ /g, '-'));
+      const categoryDirPath = path.join(targetDir, categoryName.toLowerCase().replace(/ /g, "-"));
       const categoryFiles = fs.readdirSync(categoryDirPath);
 
-      categoryFiles.forEach(file => {
+      categoryFiles.forEach((file) => {
         // Process only .md files
-        if (file.endsWith('.md') && file !== 'index.md') {
+        if (file.endsWith(".md") && file !== "index.md") {
           const filePath = path.join(categoryDirPath, file);
           const isFile = fs.statSync(filePath).isFile();
 
           if (isFile) {
             const itemName = generateTitleFromFilename(file);
-            const itemLink = `/${dirRelativePath}/${categoryName.toLowerCase().replace(/ /g, '-')}/${path.basename(file, '.md')}`;
+            const itemLink = `/${dirRelativePath}/${categoryName.toLowerCase().replace(/ /g, "-")}/${path.basename(file, ".md")}`;
 
             items.push({
               text: itemName,
-              link: itemLink
+              link: itemLink,
             });
           }
         }
@@ -72,8 +68,8 @@ export const generateSidebar = (
   const sidebarItems = [
     {
       text: sidebarTitle,
-      items: [] as any[]
-    }
+      items: [] as any[],
+    },
   ];
 
   // Add categories if subdirectories exist
@@ -83,7 +79,7 @@ export const generateSidebar = (
       sidebarItems[0].items.push({
         text: category,
         collapsed: true,
-        items: items
+        items: items,
       });
     }
   }
@@ -93,24 +89,24 @@ export const generateSidebar = (
     // Branch based on the presence of subdirectories
     if (directories.length === 0) {
       // Directly add items if no subdirectories exist
-      rootFiles.forEach(file => {
+      rootFiles.forEach((file) => {
         const itemName = generateTitleFromFilename(file);
-        const itemLink = `/${dirRelativePath}/${path.basename(file, '.md')}`;
+        const itemLink = `/${dirRelativePath}/${path.basename(file, ".md")}`;
 
         sidebarItems[0].items.push({
           text: itemName,
-          link: itemLink
+          link: itemLink,
         });
       });
     } else {
       // Add as "Others" category if subdirectories exist
-      const otherItems = rootFiles.map(file => {
+      const otherItems = rootFiles.map((file) => {
         const itemName = generateTitleFromFilename(file);
-        const itemLink = `/${dirRelativePath}/${path.basename(file, '.md')}`;
+        const itemLink = `/${dirRelativePath}/${path.basename(file, ".md")}`;
 
         return {
           text: itemName,
-          link: itemLink
+          link: itemLink,
         };
       });
 
@@ -118,16 +114,16 @@ export const generateSidebar = (
         sidebarItems[0].items.push({
           text: "Others",
           collapsed: true,
-          items: otherItems
+          items: otherItems,
         });
       }
     }
   }
 
   return sidebarItems;
-}
+};
 
 // Keep the original function as a wrapper for the generic function
 export const generateAgentsSidebar = () => {
-  return generateSidebar('agents', 'Agents');
-}
+  return generateSidebar("agents", "Agents");
+};

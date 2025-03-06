@@ -9,7 +9,6 @@ Echo agent
 #### inputs
 
 ```json
-
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "description": "",
@@ -17,26 +16,17 @@ Echo agent
   "properties": {},
   "required": []
 }
-
-````
+```
 
 ## Input example of the next node
 
 ```json
+[":agentId", ":agentId.text"]
+```
 
-[
-  ":agentId",
-  ":agentId.text"
-]
-
-````
 ```json
-
-[
-  ":agentId"
-]
-
-````
+[":agentId"]
+```
 
 ## Samples
 
@@ -45,53 +35,42 @@ Echo agent
 #### inputs
 
 ```json
-
 {}
-
-````
+```
 
 #### params
 
 ```json
-
-{"text":"this is test"}
-
-````
+{ "text": "this is test" }
+```
 
 #### result
 
 ```json
-
 {
   "text": "this is test"
 }
+```
 
-````
 ### Sample1
 
 #### inputs
 
 ```json
-
 {}
-
-````
+```
 
 #### params
 
 ```json
-
-{"text":"If you add filterParams option, it will respond to filterParams","filterParams":true}
-
-````
+{ "text": "If you add filterParams option, it will respond to filterParams", "filterParams": true }
+```
 
 #### result
 
 ```json
-
 {}
-
-````
+```
 
 ## Author
 
@@ -104,4 +83,3 @@ https://github.com/receptron/graphai
 ## License
 
 MIT
-
