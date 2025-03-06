@@ -18,10 +18,16 @@ hero:
     alt: GraphAI Logo
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - icon: 📝
+    title: Declarative Data Flow Programming
+    details: Create AI workflows with YAML or JSON, no programming required.
+  - icon: 🔄
+    title: Advanced Control Flow Features
+    details: Loops, conditionals, and MapReduce for sophisticated AI applications.
+  - icon: 🧩
+    title: Modularity and Reusability
+    details: Build complex systems from simple, reusable components.
+  - icon: 🔍
+    title: Built-in RAG Support
+    details: Ready-to-use chunking, embeddings, and similarity search for information retrieval.
 ---

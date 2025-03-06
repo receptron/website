@@ -29,8 +29,8 @@
   --translate-z: 50px;
 
   @media (min-width: 640px) {
-    --face-size: 120px;
-    --translate-z: 60px;
+    --face-size: 140px;
+    --translate-z: 70px;
   }
 }
 
