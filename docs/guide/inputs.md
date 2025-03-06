@@ -94,13 +94,13 @@ The input format has been updated from an `inputs: []` array to an `inputs: {}` 
 ---
 
 ## Change `inputs: []` array to `{}` object
-- `dataObjectMergeTemplateAgent`: {array}
-- `totalAgent`: {array}
-- `dataSumTemplateAgent`: {array}
-- `sleep`: {array}
-- `slashGPT`: {array}
-- `stringEmbeddingsAgent`: {array, item}
-- `mergeNodeIdAgent`: {array}
+- `dataObjectMergeTemplateAgent`: `{array}`
+- `totalAgent`: `{array}`
+- `dataSumTemplateAgent`: `{array}`
+- `sleep`: `{array}`
+- `slashGPT`: `{array}`
+- `stringEmbeddingsAgent`: `{array, item}`
+- `mergeNodeIdAgent`: `{array}`
 
 ---
 
@@ -111,7 +111,7 @@ The input format has been updated from an `inputs: []` array to an `inputs: {}` 
 ---
 
 ## Assign a new name when passing the `inputs[]` array
-- `wikipedia`: {query}
+- `wikipedia`: `{query}`
 
 ---
 

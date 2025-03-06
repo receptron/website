@@ -9,9 +9,6 @@ const generateTitleFromFilename = (filename: string): string => {
 
   // Capitalize the first letter of each word
   return basename
-    .split(' ')
-    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(' ');
 };
 
 export const generateSidebar = (
@@ -133,15 +130,4 @@ export const generateSidebar = (
 // Keep the original function as a wrapper for the generic function
 export const generateAgentsSidebar = () => {
   return generateSidebar('agents', 'Agents');
-}
-
-export const generateGuidesSidebar = () => {
-  const sidebarItems = generateSidebar('guide', 'Guides');
-  // Move tutorial to the top
-  const tutorialIndex = sidebarItems[0].items.findIndex(item => item.link.includes('tutorial'));
-  if (tutorialIndex > -1) {
-    const [tutorialItem] = sidebarItems[0].items.splice(tutorialIndex, 1);
-    sidebarItems[0].items.unshift(tutorialItem);
-  }
-  return sidebarItems;
 }
