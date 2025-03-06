@@ -1,5 +1,5 @@
 import { defineConfig } from "vitepress";
-import { generateAgentsSidebar } from "./helpers/generateSidebar";
+import { generateAgentsSidebar, generateShowcaseSidebar } from "./helpers/generateSidebar";
 
 // TODO: change to the actual domain
 const HOST_NAME = "";
@@ -42,6 +42,7 @@ export default defineConfig({
     nav: [
       { text: "Guide", link: "/guide/tutorial" },
       { text: "Agents", link: agentsSidebar[0].items[0].items[0].link },
+      { text: "Showcase", link: "/showcase" },
     ],
     sidebar: {
       "/guide/": [
