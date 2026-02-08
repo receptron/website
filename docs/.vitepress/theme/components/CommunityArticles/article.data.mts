@@ -3,8 +3,8 @@ import { defineLoader } from "vitepress";
 // Topics related to GraphAI but not actual GraphAI articles to be excluded
 const EXCLUDE_ARTICLES = [
   "https://zenn.dev/raycast_jp/articles/2024-11-23-fullstack-ai-dev-n-raycast-summit-talk4",
-  "https://zenn.dev/raycast_jp/articles/2024-11-23-fullstack-ai-dev-n-raycast-summit-talk2"
-]
+  "https://zenn.dev/raycast_jp/articles/2024-11-23-fullstack-ai-dev-n-raycast-summit-talk2",
+];
 
 type Article = {
   title: string;
@@ -33,21 +33,23 @@ const fetchZennTopicArticles = async (topicName: string): Promise<Article[]> => 
     const nextData = JSON.parse(nextDataMatch[1]);
     const articlesData = nextData.props?.pageProps?.articles || [];
 
-    const articles: Article[] = articlesData.map((article: any) => {
-      const user = article.user || {};
+    const articles: Article[] = articlesData
+      .map((article: any) => {
+        const user = article.user || {};
 
-      const authorUrl = `https://zenn.dev/${user.username}`;
+        const authorUrl = `https://zenn.dev/${user.username}`;
 
-      return {
-        title: article.title,
-        url: `https://zenn.dev${article.path}`,
-        author: user.name,
-        authorUrl,
-        emoji: article.emoji,
-        likedCount: article.likedCount,
-        publishedAt: article.publishedAt,
-      };
-    }).filter((article: Article) => !EXCLUDE_ARTICLES.includes(article.url));
+        return {
+          title: article.title,
+          url: `https://zenn.dev${article.path}`,
+          author: user.name,
+          authorUrl,
+          emoji: article.emoji,
+          likedCount: article.likedCount,
+          publishedAt: article.publishedAt,
+        };
+      })
+      .filter((article: Article) => !EXCLUDE_ARTICLES.includes(article.url));
 
     return articles.sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime());
   } catch (error) {

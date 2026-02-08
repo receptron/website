@@ -23,11 +23,13 @@
     "deploy": "yarn build && firebase deploy --only hosting"
   },
   "devDependencies": {
-    "eslint": "^9.21.0",
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.0.0",
     "eslint-config-prettier": "^10.0.2",
+    "globals": "^17.3.0",
     "prettier": "^3.5.2",
     "typescript": "^5.8.2",
-    "typescript-eslint": "^8.25.0",
+    "typescript-eslint": "^8.54.0",
     "vitepress": "^1.6.3"
   }
 }
