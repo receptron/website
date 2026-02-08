@@ -20,7 +20,6 @@ These combinations allow transparent streaming regardless of setup.
 
 2. **Processing within Callback Functions**
    The callback function receives information such as `nodeId`, `agentId`, and `data` from the context and processes data individually for different environments.
-
    - **In Browsers**
      Data received through the callback function is displayed in real time in the browser, enabling live updates.
 
