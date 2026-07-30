@@ -22,14 +22,17 @@
     "format:check": "prettier --check 'docs/**/*.{ts,css,js,vue,mts,json,md}'",
     "deploy": "yarn build && firebase deploy --only hosting"
   },
+  "resolutions": {
+    "postcss": "^8.5.18"
+  },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
-    "eslint": "^10.6.0",
+    "eslint": "^10.8.0",
     "eslint-config-prettier": "^10.1.8",
-    "globals": "^17.7.0",
-    "prettier": "^3.9.1",
+    "globals": "^17.8.0",
+    "prettier": "^3.9.6",
     "typescript": "^6.0.3",
-    "typescript-eslint": "^8.62.0",
+    "typescript-eslint": "^8.65.0",
     "vitepress": "^1.6.4"
   }
 }
