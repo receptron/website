@@ -30,6 +30,9 @@ docs/.vitepress/dist
 docs/.vitepress/cache
 docs/.vitepress/.temp
 
+# jscpd duplication-scan output
+report/
+
 # Environment variables
 .env
 .env.local

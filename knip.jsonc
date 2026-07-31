@@ -1,0 +1,28 @@
+{
+  "$schema": "https://unpkg.com/knip@6/schema.json",
+  // VitePress site whose .vitepress/ lives under docs/, not at the repo root. knip's built-in
+  // vitepress plugin only auto-detects a root-level .vitepress/, so the entry points are listed
+  // explicitly here: the site config, the custom theme, and every VitePress data loader
+  // (*.data.mts). generateSidebar.ts is reached from config.mts, and the .vue SFCs from
+  // theme/index.mts, so they are covered transitively.
+  "entry": ["docs/.vitepress/config.mts", "docs/.vitepress/theme/index.mts", "docs/.vitepress/**/*.data.mts"],
+  // The analyzable TS/Vue/mts source; everything else under docs/ is Markdown content.
+  "project": ["docs/.vitepress/**/*.{ts,mts,vue}"],
+  "ignoreExportsUsedInFile": true,
+  "includeEntryExports": false,
+  "rules": {
+    // Warn mode: every rule is "warn" (reported, exit 0) or "off". Nothing gates CI here.
+    "files": "warn",
+    "dependencies": "warn",
+    "devDependencies": "warn",
+    "unlisted": "warn",
+    "exports": "warn",
+    "types": "warn",
+    "unresolved": "off",
+    "binaries": "off",
+    "nsExports": "off",
+    "nsTypes": "off",
+    "enumMembers": "off",
+    "duplicates": "off"
+  }
+}

@@ -20,6 +20,7 @@
     "eslint:check": "eslint docs",
     "format": "prettier --write 'docs/**/*.{ts,css,js,vue,mts,json,md}'",
     "format:check": "prettier --check 'docs/**/*.{ts,css,js,vue,mts,json,md}'",
+    "knip": "knip",
     "deploy": "yarn build && firebase deploy --only hosting"
   },
   "resolutions": {
@@ -30,6 +31,7 @@
     "eslint": "^10.8.0",
     "eslint-config-prettier": "^10.1.8",
     "globals": "^17.8.0",
+    "knip": "^6",
     "prettier": "^3.9.6",
     "typescript": "^6.0.3",
     "typescript-eslint": "^8.65.0",
